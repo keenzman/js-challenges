@@ -32,7 +32,11 @@ const largeNumber1 = 100;
 const largeNumber2 = 200;
 
 export const findLargestNumber = () => {
-  // Write your code here
+  if (largeNumber1 > largeNumber2) {
+    return largeNumber1;
+  } else if (largeNumber2 > largeNumber1) {
+    return largeNumber2;
+  }
 };
 
 /**
@@ -45,7 +49,7 @@ const addNumber1 = 12;
 const addNumber2 = 24;
 
 export const addNumbers = () => {
-  // Write your code here
+  return addNumber1 + addNumber2;
 };
 
 /* Intermediate Challenges */
@@ -59,7 +63,7 @@ export const addNumbers = () => {
 const password = "thisIsMyVeryLongPassword123456789";
 
 export const findLengthOfPassword = () => {
-  // Write your code here
+  return password.length
 };
 
 /**
@@ -75,7 +79,15 @@ export const findLengthOfPassword = () => {
 const thing = "I am a thing";
 
 export const findType = () => {
-  // Write your code here
+  if (typeof(thing == String)) {
+    return "This is a string"
+  } else if (typeof(thing == Number)) {
+    return "This is a number"
+  } else if (typeof(thing == Boolean)) {
+    return "This is a Boolean"
+  } else {
+    return "I don't know what this thing is"
+  }
 };
 
 /**
@@ -88,7 +100,7 @@ export const findType = () => {
 const nameTagOption = "Timothy";
 
 export const getIsValidOnNameTag = () => {
-  // Write your code here
+  // let splitName = nameTagOption.split('');
 };
 
 /* Advanced Challenges */
@@ -102,7 +114,7 @@ export const getIsValidOnNameTag = () => {
 const stringToConvert = "14.45";
 
 export const convertStringToNumber = () => {
-  // Write your code here
+  return parseFloat(stringToConvert);
 };
 
 /**
