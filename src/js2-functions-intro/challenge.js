@@ -114,46 +114,26 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  * @returns {string} A - F | Score unavailable
  */
 export const getGrade = (score) => {
-  // switch (score) {
-  //   case 1:
-  //     if (score >= 80)
-  //     return "A";
-  //     break;
-  //   case 2:
-  //     if (score >= 70)
-  //     return "B";
-  //     break;
-  //   case 3:
-  //     if (score >= 60)
-  //     return "C";
-  //     break;
-  //   case (score >= 50):
-  //     return "D";
-  //     break;
-  //   case (score >= 40):
-  //     return "E";
-  //     break;
-  //   default:
-  //     return "Score unavailable";
-  //     break;
-  // }
+  switch (true) {
+    case typeof score != "number":
+      return "Score unavailable"
+    case (score >= 80 && score <= 100):
+      return "A";
+    case (score >=70 && score <=79):
+      return "B";
+    case (score >=60 && score <=69):
+      return "C";
+    case (score >=50 && score <=59):
+      return "D";
+    case (score >=40 && score <=49):
+      return "E";
+    case (score >=0 && score <=39):
+      return "F";
+    default:
+      return "Score unavailable";
+    }
+  }
 
-  // if (score >= 80) {
-  //   return "A";
-  // } else if (score >= 70) {
-  //   return "B";
-  // } else if (score >= 60) {
-  //   return "C";
-  // } else if (score >= 50) {
-  //   return "D";
-  // } else if (score >= 40) {
-  //   return "E";
-  // } else if (score >=39) {
-  //   return "F";
-  // } else if (score < 0 || score > 100 || typeof(score !== Number)) {
-  //     return "Score unavailable";
-  // }
-};
 /**
  * A function that find the area of a circle to 2 decimal places.
  *
