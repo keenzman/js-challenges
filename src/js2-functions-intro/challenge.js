@@ -17,7 +17,7 @@
  * @returns {string} John Smith
  */
 export const createFullName = (firstName, lastName) => {
-  /* Write your code here */
+  return `${firstName} ${lastName}`
 };
 
 /**
@@ -28,8 +28,12 @@ export const createFullName = (firstName, lastName) => {
  * @param {number} number2 200
  * @returns {number} 100
  */
-export const findSmallestNumber = (/* Write the parameters here */) => {
-  /* Write your code here */
+export const findSmallestNumber = (number1, number2) => {
+  if (number1 < number2) {
+    return number1;
+  } else {
+    return number2;
+  }
 };
 
 /**
@@ -40,8 +44,9 @@ export const findSmallestNumber = (/* Write the parameters here */) => {
  * @param {number} number2 6
  * @returns {number} 18
  */
-export const multiplyNumbers = (/* Write the parameters here */) => {
-  /* Write your code here */
+export const multiplyNumbers = (num1, num2) => {
+  const multiplyNum = num1 * num2;
+  return multiplyNum;
 };
 
 /* Intermediate Challenges */
@@ -57,7 +62,13 @@ export const multiplyNumbers = (/* Write the parameters here */) => {
  * @returns {string} "You got a new high score!" | "So close!" | "Better luck next time!"
  */
 export const checkIfNewHighScore = (score, highScore) => {
-  /* Write your code here */
+  if (score > highScore) {
+    return "You got a new high score!";
+  } else if (score === highScore) {
+    return "So close!";
+  } else {
+    return "Better luck next time!";
+  }
 };
 
 /**
@@ -67,7 +78,8 @@ export const checkIfNewHighScore = (score, highScore) => {
  * @returns {string} "15 degrees celsius is 59 degrees fahrenheit"
  */
 export const celsiusToFahrenheit = (tempInCelsius) => {
-  /* Write your code here */
+  const conversion = (tempInCelsius * 1.8000) + 32.00
+  return `${tempInCelsius} degrees celsius is ${conversion} degrees fahrenheit`
 };
 
 /**
@@ -80,7 +92,9 @@ export const celsiusToFahrenheit = (tempInCelsius) => {
  * @returns {number} 47450
  */
 export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
-  /* Write your code here */
+  const barsPerYear = snickersPerDay * 365;
+  const lifetime = maxAge - age;
+  return barsPerYear * lifetime;
 };
 
 /* Advanced Challenges */
@@ -100,7 +114,45 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  * @returns {string} A - F | Score unavailable
  */
 export const getGrade = (score) => {
-  /* Write your code here */
+  // switch (score) {
+  //   case 1:
+  //     if (score >= 80)
+  //     return "A";
+  //     break;
+  //   case 2:
+  //     if (score >= 70)
+  //     return "B";
+  //     break;
+  //   case 3:
+  //     if (score >= 60)
+  //     return "C";
+  //     break;
+  //   case (score >= 50):
+  //     return "D";
+  //     break;
+  //   case (score >= 40):
+  //     return "E";
+  //     break;
+  //   default:
+  //     return "Score unavailable";
+  //     break;
+  // }
+
+  // if (score < 0 || score > 100 || score !== Number) {
+  //   return "Score unavailable";
+  // } else if (score >= 80) {
+  //   return "A";
+  // } else if (score >= 70) {
+  //   return "B";
+  // } else if (score >= 60) {
+  //   return "C";
+  // } else if (score >= 50) {
+  //   return "D";
+  // } else if (score >= 40) {
+  //   return "E";
+  // } else {
+  //   return "F";
+  // }
 };
 
 /**
@@ -110,7 +162,9 @@ export const getGrade = (score) => {
  * @returns {number} 28.27
  */
 export const calculateAreaOfCirlce = (radius) => {
-  /* Write your code here */
+  const pi = 3.14159265359;
+  const area = pi*radius*radius;
+  return parseFloat(area.toFixed(2));
 };
 
 /* Expert Challenge */

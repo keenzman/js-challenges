@@ -12,7 +12,7 @@ const {
   getStudentSummary
 } = challenge;
 
-describe("createFullName() tests", () => {
+xdescribe("createFullName() tests", () => {
   it("Should have a return", () => {
     expect(createFullName("John", "Smith")).toBeDefined();
   });
@@ -101,7 +101,7 @@ xdescribe("calculateLifeTimeSupply() tests", () => {
   });
 });
 
-xdescribe("getGrade() tests", () => {
+describe("getGrade() tests", () => {
   it("Should have a return", () => {
     expect(getGrade(70)).toBeDefined();
   });
