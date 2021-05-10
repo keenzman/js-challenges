@@ -12,22 +12,22 @@ const {
   convertPascalCaseToSnakeCase
 } = challenge;
 
-test("createFullName() tests", () => {
+xtest("createFullName() tests", () => {
   expect(createFullName()).toBeDefined();
   expect(createFullName()).toBe("John Smith");
 });
 
-test("findLargestNumber() tests", () => {
+xtest("findLargestNumber() tests", () => {
   expect(findLargestNumber()).toBeDefined();
   expect(findLargestNumber()).toBe(200);
 });
 
-test("addNumbers() tests", () => {
+xtest("addNumbers() tests", () => {
   expect(addNumbers()).toBeDefined();
   expect(addNumbers()).toBe(36);
 });
 
-test("findLengthOfPassword() tests", () => {
+xtest("findLengthOfPassword() tests", () => {
   expect(findLengthOfPassword()).toBeDefined();
   expect(findLengthOfPassword()).toBe(33);
 });
@@ -42,7 +42,7 @@ xtest("getIsValidOnNameTag() tests", () => {
   expect(getIsValidOnNameTag()).toBe(true);
 });
 
-test("convertStringToNumber() tests", () => {
+xtest("convertStringToNumber() tests", () => {
   expect(convertStringToNumber()).toBeDefined();
   expect(convertStringToNumber()).toBe(14.45);
 });

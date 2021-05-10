@@ -138,9 +138,7 @@ export const getGrade = (score) => {
   //     break;
   // }
 
-  // if (score < 0 || score > 100 || score !== Number) {
-  //   return "Score unavailable";
-  // } else if (score >= 80) {
+  // if (score >= 80) {
   //   return "A";
   // } else if (score >= 70) {
   //   return "B";
@@ -150,11 +148,12 @@ export const getGrade = (score) => {
   //   return "D";
   // } else if (score >= 40) {
   //   return "E";
-  // } else {
+  // } else if (score >=39) {
   //   return "F";
+  // } else if (score < 0 || score > 100 || typeof(score !== Number)) {
+  //     return "Score unavailable";
   // }
 };
-
 /**
  * A function that find the area of a circle to 2 decimal places.
  *
