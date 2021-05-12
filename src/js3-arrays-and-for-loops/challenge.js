@@ -22,7 +22,7 @@
  */
 
 export const createRecipeString = (ingredientsArr) => {
-  return;
+  return `${ingredientsArr.join("+")}`;
 };
 
 /**
@@ -33,7 +33,10 @@ export const createRecipeString = (ingredientsArr) => {
  */
 
 export const getFirstAndLastItems = (itemsArr) => {
-  return;
+  const firstItem = itemsArr[0];
+  const lastItem = itemsArr[itemsArr.length - 1];
+  const twoItemArr = [firstItem, lastItem]
+  return twoItemArr;
 };
 
 /**
@@ -44,7 +47,11 @@ export const getFirstAndLastItems = (itemsArr) => {
  */
 
 export const totalScores = (scoreArr) => {
-  return;
+  let total = 0;
+  scoreArr.forEach(item => {
+    total += item;
+  })
+  return total;
 };
 
 /**
@@ -71,7 +78,11 @@ export const totalRange = (rangeMax) => {
  */
 
 export const moveFirstAndLastItems = (itemsArr) => {
-  return;
+  // const firstItem = itemsArr.shift();
+  // const lastItem = itemsArr.pop();
+  // const removeItemsOriginalArr = itemsArr.slice(1, - 1)
+  // const updatedArr = [lastItem, ...removeItemsOriginalArr, firstItem]
+  // return updatedArr;
 };
 
 /**
@@ -89,7 +100,13 @@ export const moveFirstAndLastItems = (itemsArr) => {
  */
 
 export const removeEvenNumbers = (numberArr) => {
-  return;
+  // const modifiedArr = [...numberArr]
+  // modifiedArr.forEach(item => {
+  //   if(item % 2) {
+  //     item.pop()
+  //   }
+  // })
+  // return modifiedArr;
 };
 
 /**
