@@ -22,7 +22,10 @@
  */
 
 export const totalScoresArr = (scoresArr) => {
-  return;
+  const allNums = (total, currentNum) => {
+    return total + currentNum;
+  };
+  return scoresArr.reduce(allNums);
 };
 
 /**
@@ -35,7 +38,13 @@ export const totalScoresArr = (scoresArr) => {
  */
 
 export const reverseString = (toReverse) => {
-  return;
+  const convertToArr = [...toReverse]; // ["c", "o", "c", "o"...]
+  // console.log(convertToArr);
+  const reverseStrInArr = convertToArr.reverse(); // [..."o", "c", "o", "c"]
+  // console.log(reverseStrInArr);
+  // console.log(reverseStrInArr.join("")); // "tunococ"
+
+  return reverseStrInArr.join("");
 };
 
 /**
@@ -48,7 +57,24 @@ export const reverseString = (toReverse) => {
  */
 
 export const sortCharactersAlphabetically = (charcterArr) => {
-  return;
+  const convertStrArrInput = charcterArr.join(" ");
+  // console.log(convertStrArrInput);
+  const makeLowerCase = convertStrArrInput.toLowerCase();
+  // console.log(makeLowerCase);
+  const makeLowerCaseArr = makeLowerCase.split(" ");
+  // console.log(makeLowerCaseArr);
+
+  const sortAlphabets = makeLowerCaseArr.sort((letter1, letter2) => {
+    if (letter1 > letter2) {
+      return 1;
+    }
+    if (letter2 > letter1) {
+      return -1;
+    }
+    return 0;
+  });
+  // console.log(sortAlphabets);
+  return sortAlphabets;
 };
 
 /**

@@ -35,7 +35,7 @@ export const createRecipeString = (ingredientsArr) => {
 export const getFirstAndLastItems = (itemsArr) => {
   const firstItem = itemsArr[0];
   const lastItem = itemsArr[itemsArr.length - 1];
-  const twoItemArr = [firstItem, lastItem]
+  const twoItemArr = [firstItem, lastItem];
   return twoItemArr;
 };
 
@@ -48,9 +48,9 @@ export const getFirstAndLastItems = (itemsArr) => {
 
 export const totalScores = (scoreArr) => {
   let total = 0;
-  scoreArr.forEach(item => {
+  scoreArr.forEach((item) => {
     total += item;
-  })
+  });
   return total;
 };
 
@@ -67,7 +67,11 @@ export const totalScores = (scoreArr) => {
  */
 
 export const totalRange = (rangeMax) => {
-  return;
+  let total = 0;
+  for (let i = 0; i <= rangeMax; i++) {
+    total += i;
+  }
+  return total;
 };
 
 /**
@@ -78,13 +82,18 @@ export const totalRange = (rangeMax) => {
  */
 
 export const moveFirstAndLastItems = (itemsArr) => {
-  // const firstItem = itemsArr.shift();
   // const lastItem = itemsArr.pop();
-  // const removeItemsOriginalArr = itemsArr.slice(1, - 1)
-  // const updatedArr = [lastItem, ...removeItemsOriginalArr, firstItem]
+  // const moveLastItemToFront = itemsArr.unshift(lastItem);
+  // // const removeItemsOriginalArr = itemsArr.slice(1, - 1)
+  // const updatedArr = [...moveLastItemToFront];
+  // console.log(updatedArr);
   // return updatedArr;
+  //
+  // const lastName = itemsArr.pop();
+  // const removeItemsOriginalArr = [...itemsArr];
+  // console.log(removeItemsOriginalArr);
+  // return removeItemsOriginalArr;
 };
-
 /**
  * Read this article on how to clone an array.
  * https://www.samanthaming.com/tidbits/35-es6-way-to-clone-an-array/

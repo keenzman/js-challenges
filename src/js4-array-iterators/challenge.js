@@ -22,7 +22,12 @@
  */
 
 export const removeFalseValues = (booleanArr) => {
-  return;
+  const filterFalseArr = booleanArr.filter((findFalse) => {
+    // console.log(findFalse);
+    // this is doing a falsy check
+    return findFalse;
+  });
+  return filterFalseArr;
 };
 
 /**
@@ -34,7 +39,10 @@ export const removeFalseValues = (booleanArr) => {
  */
 
 export const createPercentageList = (numbersArr) => {
-  return;
+  const changeInput = numbersArr.map((number) => {
+    return number * 100 + "%";
+  });
+  return changeInput;
 };
 
 /**
@@ -47,7 +55,10 @@ export const createPercentageList = (numbersArr) => {
  */
 
 export const createListOfPoessessions = (possessionsArr, name) => {
-  return;
+  const modifyPosessions = possessionsArr.map((item) => {
+    return `${name} ${item}`;
+  });
+  return modifyPosessions;
 };
 
 /**
@@ -72,7 +83,10 @@ export const createListOfPoessessions = (possessionsArr, name) => {
  */
 
 export const convertStringToNumbersArray = (numberString) => {
-  return;
+  const convertToArr = numberString.split("+");
+  const convertNewStrArrToNum = convertToArr.map(Number);
+  // console.log(convertToArr);
+  return convertNewStrArrToNum;
 };
 
 /**
@@ -84,7 +98,16 @@ export const convertStringToNumbersArray = (numberString) => {
  */
 
 export const createOddEvenArray = (numberString) => {
-  return;
+  const recallConversion = convertStringToNumbersArray(numberString);
+  const checkOddEven = recallConversion.map((item) => {
+    if (item % 2 === 0) {
+      return "even";
+    } else {
+      return "odd";
+    }
+  });
+  console.log(checkOddEven);
+  return checkOddEven;
 };
 
 /**
@@ -97,7 +120,11 @@ export const createOddEvenArray = (numberString) => {
  */
 
 export const filterBooksBySearch = (booksArr, searchTerm) => {
-  return;
+  const filterSearch = booksArr.filter((book) => {
+    const check = book.includes(searchTerm);
+    return check;
+  });
+  return filterSearch;
 };
 
 /**
