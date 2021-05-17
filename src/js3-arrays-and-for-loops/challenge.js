@@ -49,6 +49,7 @@ export const getFirstAndLastItems = (itemsArr) => {
 export const totalScores = (scoreArr) => {
   let total = 0;
   scoreArr.forEach((item) => {
+    console.log(item);
     total += item;
   });
   return total;
