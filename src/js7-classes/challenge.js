@@ -60,7 +60,7 @@ export class Alert {
    * @return {string} "!!!! Are sure you want to proceed? !!!!"
    */
   printMessage() {
-    return `"!!!! " ${this.message} " !!!!"`;
+    return `!!!! ${this.message} !!!!`;
   }
 }
 
@@ -88,17 +88,25 @@ export class Loader {
    * Create a loader.
    * @param {{innerHTML:string}} htmlRef - {innerHTML:""}
    */
-  constructor() {}
+  constructor(htmlRef) {
+    this.htmlRef = htmlRef;
+  }
 
   /**
    * Updates the htmlRef.innerHTML to display the loader's html.
    */
-  displayLoader() {}
+  displayLoader() {
+    const htmlSnippet = `<div class="loader"></div>`;
+    this.htmlRef.innerHTML = htmlSnippet;
+  }
 
   /**
    * Updates the htmlRef.innerHTML to remove the loader's html.
    */
-  removeLoader() {}
+  removeLoader() {
+    const updateSnippet = "";
+    this.htmlRef.innerHTML = updateSnippet;
+  }
 }
 
 /**
@@ -130,7 +138,9 @@ export class Counter {
    * Create an counter.
    * @param {number} count - 50
    */
-  constructor() {}
+  constructor(count = 0) {
+    this.count = count;
+  }
 
   /**
    * A method that increments count by 1.
@@ -138,6 +148,10 @@ export class Counter {
    */
 
   // WRITE INCREMENT FUNCTION HERE
+  increment() {
+    this.count = this.count + 1;
+    return this.count;
+  }
 
   /**
    * A method that decrements count by 1 but will not go below 0.
@@ -145,6 +159,13 @@ export class Counter {
    */
 
   // WRITE DECREMENT FUNCTION HERE
+  decrement() {
+    if (this.count > 0) {
+      this.count = this.count - 1;
+      // console.log(`This is the decrement ${this.count}`);
+      return this.count;
+    }
+  }
 }
 
 /**
@@ -172,13 +193,16 @@ export class Engine {
   /**
    * Create an engine.
    */
-  constructor() {}
+  constructor() {
+    // this.engineIsRunning = false;
+  }
 
   /**
    * Updates engineIsRunning to true and returns a conditonal string based if the engine is already running.
    * @return {string} "Engine has started running" or "Engine is already running"
    */
   startEngine() {
+    // this.engineIsRunning = true;
     return;
   }
 

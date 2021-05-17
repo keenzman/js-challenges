@@ -45,7 +45,7 @@ xdescribe("Testing Coordinate class", () => {
   });
 });
 
-describe("Testing Alert class", () => {
+xdescribe("Testing Alert class", () => {
   const logOutAlert = new Alert("Are you sure you want to log out?");
   const deleteAlert = new Alert(
     "Are you sure you want to delete this content?"
@@ -132,7 +132,7 @@ xdescribe("Testing Loader class", () => {
   });
 });
 
-xdescribe("Testing Counter class", () => {
+describe("Testing Counter class", () => {
   let lowCount, highCount, noCount;
 
   beforeEach(() => {
