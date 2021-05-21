@@ -85,7 +85,6 @@ export const createListOfPoessessions = (possessionsArr, name) => {
 export const convertStringToNumbersArray = (numberString) => {
   const convertToArr = numberString.split("+");
   const convertNewStrArrToNum = convertToArr.map(Number);
-  // console.log(convertToArr);
   return convertNewStrArrToNum;
 };
 
@@ -106,7 +105,7 @@ export const createOddEvenArray = (numberString) => {
       return "odd";
     }
   });
-  console.log(checkOddEven);
+  // console.log(checkOddEven);
   return checkOddEven;
 };
 
@@ -144,12 +143,10 @@ export const filterBooksBySearch = (booksArr, searchTerm) => {
  */
 
 export const formatStringArray = (stringArr) => {
-  const cleanedArr = stringArr.forEach((string) => {
+  const cleanedArr = stringArr.map((string) => {
     const cleanStr = string.trim().toLowerCase();
     return cleanStr;
   });
-
-  // console.log(???)
 
   const joinedString = cleanedArr.join("+");
 

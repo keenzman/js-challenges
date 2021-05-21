@@ -196,7 +196,7 @@ xdescribe("Testing createOddEvenArray()", () => {
   });
 });
 
-describe("Testing filterBooksBySearch()", () => {
+xdescribe("Testing filterBooksBySearch()", () => {
   it("Should return an array", () => {
     expect(Array.isArray(filterBooksBySearch(["one thing"], "one thing"))).toBe(
       true
@@ -286,7 +286,7 @@ xdescribe("Testing formatStringArray()", () => {
   });
 });
 
-xdescribe("Testing formatString()", () => {
+describe("Testing formatString()", () => {
   it("Should NOT return undefined", () => {
     expect(formatString("  defined")).toBeDefined();
   });
